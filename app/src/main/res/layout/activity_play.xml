@@ -1,0 +1,149 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/play_view"
+    android:background="#FE8B7E"
+    android:orientation="vertical">
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#34a637"-->
+<!--        android:gravity="center"-->
+<!--        android:padding="10dp"-->
+<!--        android:text="在线音乐播放器"-->
+<!--        android:textColor="#ffffff"-->
+<!--        android:textSize="17sp" />-->
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/tv_logo"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/nolopic"
+        android:layout_width="fill_parent"
+        android:layout_height="280dp" />
+    <com.qugengting.audio.RolingTextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:id="@+id/tv_name"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <com.qugengting.audio.RolingTextView
+        android:layout_marginTop="8dp"
+        android:id="@+id/tv_artist"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"/>
+    <LinearLayout
+        android:layout_marginTop="40px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:maxHeight="27dp"
+            android:minHeight="27dp"
+            android:progress="25"
+            android:progressDrawable="@drawable/seekbar_bg"
+            android:secondaryProgress="0"
+            android:thumb="@android:color/background_light" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="16dp"
+            android:textColor="#fff"
+            android:id="@+id/tv_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="00:00" />
+
+        <SeekBar
+
+             android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:visibility="invisible"
+            android:maxHeight="27dp"
+            android:minHeight="27dp"
+            android:progress="25"
+            android:progressDrawable="@drawable/seekbar_bg"
+            android:secondaryProgress="0"
+            android:thumb="@android:color/background_light" />
+
+        <TextView
+            android:textSize="16dp"
+            android:textColor="#fff"
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="00:00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageButton
+             android:background="@drawable/next"
+            android:layout_width="90dp"
+            android:id="@+id/btn_last"
+            android:layout_height="90dp"
+            android:layout_gravity="center_vertical" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/btn_play"
+            android:background="@drawable/play"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center_vertical" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:background="@drawable/last"
+            android:id="@+id/btn_next"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+</LinearLayout>
