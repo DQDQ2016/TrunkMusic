@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".ListActivity">
+
+
+
+<!--        android:orientation="vertical">-->
+
+
+        <ListView
+            android:id="@+id/mlist"
+            android:layout_marginBottom="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff" />
+
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bottom_play"
+            android:orientation="horizontal"
+           >
+
+            <ImageView
+                android:id="@+id/img_bottom"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/nolopic" />
+            <LinearLayout
+                android:id="@+id/bottom_layout"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <com.qugengting.audio.RolingTextView
+                    android:layout_marginTop="6dp"
+                    android:textSize="17dp"
+                    android:textColor="#000"
+                    android:id="@+id/playbar_songname"
+                    android:layout_width="200dp"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content" />
+
+
+
+
+                <com.qugengting.audio.RolingTextView
+                    android:textSize="14dp"
+                    android:layout_width="200dp"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:id="@+id/playbar_artist"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_bottom"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/play_b"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+         </LinearLayout>
+
+<!--    </LinearLayout>-->
+
+
+</RelativeLayout>
